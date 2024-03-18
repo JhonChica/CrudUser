@@ -1,19 +1,13 @@
 package org.acme.controller;
 
 import jakarta.inject.Inject;
-import org.acme.dao.UsuarioDao;
-import org.acme.entity.Usuario;
 import org.acme.gen.contract.V1UsuarioApi;
 import org.acme.gen.type.UsuarioTypeInput;
 import org.acme.gen.type.UsuarioTypeResponse;
 import org.acme.service.implemt.UsuarioServiceImpl;
-import org.acme.utils.ApplicationException;
-import org.acme.utils.UsuarioMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.util.Collections;
 import java.util.List;
-import static org.acme.constant.Constant.ERROR_SERVICIO;
 
 public class UsuarioController implements V1UsuarioApi {
     private  static  final Logger LOG = LoggerFactory.getLogger(UsuarioController.class);

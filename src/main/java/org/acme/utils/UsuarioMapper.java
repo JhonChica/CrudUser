@@ -26,7 +26,6 @@ public class UsuarioMapper {
             UsuarioTypeResponse response = new ModelMapper().map(usuario, UsuarioTypeResponse.class);
             responses.add(response);
         }
-
         return responses;
     }
 }

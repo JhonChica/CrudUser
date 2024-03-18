@@ -14,9 +14,6 @@ import org.acme.utils.ApplicationException;
 import org.acme.utils.UsuarioMapper;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
-
-
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
