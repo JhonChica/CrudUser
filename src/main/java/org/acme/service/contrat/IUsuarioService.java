@@ -5,9 +5,9 @@ import org.acme.gen.type.UsuarioTypeResponse;
 import java.util.List;
 
 public interface IUsuarioService {
-    List<UsuarioTypeResponse> crearUsuario(UsuarioTypeInput usuarioTypeInput);
-    List<UsuarioTypeResponse> editarUsuario(Integer idtblUser, UsuarioTypeInput usuarioTypeInput);
-    List<UsuarioTypeResponse> listarUsuario(Integer idtblUser);
+    UsuarioTypeResponse crearUsuario(UsuarioTypeInput usuarioTypeInput);
+    UsuarioTypeResponse editarUsuario(Integer idtblUser, UsuarioTypeInput usuarioTypeInput);
+    UsuarioTypeResponse buscarUsuario(Integer idtblUser);
     void eliminarUsuario(Integer idtblUser);
     List<UsuarioTypeResponse> listarTodosLosUsuario();
 }

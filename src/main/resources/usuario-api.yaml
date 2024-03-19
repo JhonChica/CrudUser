@@ -21,8 +21,7 @@ tags:
     description: Gestion de usuarios
 #----------------------------
 #Endpoints de la Entidad
-#-------------------------------------------------------------------------------
-#------------------------------------CREAR USUSARIO-----------------------------
+#----------------------------
 paths:
   /v1/es/crearUsuario:
     post:
@@ -48,9 +47,7 @@ paths:
           description: "Parámetros de entrada no validos."
         "404":
           description: "No se encuentra la novedad."
-#-------------------------------------------------------------------------------
-#------------------------------------OBTENER USUARIO----------------------------
-  /v1/es/listUsuario/{idtbl_user}:
+  /v1/es/buscarUsuario/{idtbl_user}:
     get:
       tags:
         - Listar usuario
@@ -62,10 +59,10 @@ paths:
             type: integer
             minimum: 1
           description: The user ID
-      operationId: listarUsuario
+      operationId: buscarUsuario
       responses:
         "200":
-          description: Usuario creado.
+          description: Usuario encontrado.
           content:
             application/json:
               schema:
@@ -76,8 +73,6 @@ paths:
           description: "Parámetros de entrada no validos."
         "404":
           description: "No se encuentra la novedad."
-#--------------------------------------------------------------------------------
-#------------------------------------ELIMINAR USUARIO----------------------------
   /v1/es/eliminarUsuario/{idtbl_user}:
     delete:
       tags:
@@ -98,8 +93,6 @@ paths:
           description: "Parámetros de entrada no validos."
         "404":
           description: "No se encuentra la novedad."
-#-------------------------------------------------------------------------------
-#------------------------------------EDITAR USUSARIO-----------------------------
   /v1/es/editarUsuario/{idtbl_user}:
     put:
       tags:
@@ -132,9 +125,7 @@ paths:
           description: "Parámetros de entrada no validos."
         "404":
           description: "No se encuentra la novedad."
-#--------------------------------------------------------------------------------
-#------------------------------------LISTAR TODOS LOS USUARIO--------------------
-  /v1/es/listadoUsuarios:
+  /v1/es/listarTodosLosUsuario:
     get:
       tags:
         - Listar todos los usuario
@@ -177,35 +168,3 @@ components:
         createat:
           type: string
           format: date
-        tbl_acept:
-          type: number
-          minimum: 0
-          maximum: 1
-        tbl_idnumber:
-          type: string
-        tbl_idtbl_documenttype:
-          type: number
-        tbl_idtbl_role:
-          type: number
-        tbl_idtbl_userdetails:
-          type: integer
-        tbl_password:
-          type: string
-        tbl_phone:
-          type: string
-        tbl_status:
-          type: number
-          minimum: 0
-          maximum: 1
-        tbl_update_at:
-          type: string
-          format: date
-        tbl_imagendocument:
-          type: string
-        tbl_mail:
-          type: string
-          format: mail
-        tbl_phonealt:
-          type: string
-        tbl_photo:
-          type: string
